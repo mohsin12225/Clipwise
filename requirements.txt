@@ -1,0 +1,37 @@
+# ── Web framework ────────────────────────────────────────────────
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.3
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# ── HTTP client (Groq API + Ollama API calls) ────────────────────
+httpx==0.26.0
+aiofiles==23.2.1
+
+# ── Video download ────────────────────────────────────────────────
+yt-dlp>=2024.1.7
+
+# ── FFmpeg note ───────────────────────────────────────────────────
+# FFmpeg and FFprobe must be installed separately on the OS.
+#   macOS:  brew install ffmpeg
+#   Ubuntu: sudo apt install ffmpeg
+#   Windows: https://ffmpeg.org/download.html  (add to PATH)
+
+# ── AI transcription ──────────────────────────────────────────────
+# faster-whisper is strongly preferred: 4-10x faster than openai-whisper
+# and uses int8 quantization on CPU automatically.
+faster-whisper>=1.0.0
+
+# Uncomment this as a fallback if faster-whisper fails to install:
+# openai-whisper>=20231117
+
+# ── AI highlight detection ────────────────────────────────────────
+# Groq SDK (free tier — get key at https://console.groq.com)
+groq>=0.4.0
+
+# ── AI smart reframing (optional) ────────────────────────────────
+opencv-python-headless>=4.9.0
+mediapipe>=0.10.9
+numpy>=1.24.0
